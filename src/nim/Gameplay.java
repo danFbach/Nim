@@ -3,14 +3,17 @@ package nim;
 public class Gameplay {
 
 	GameStart begin = new GameStart();
-	GameEngine play = new GameEngine();
+	GameEngine stickCount = new GameEngine();
 	Player player = new Player();
 	Integer StartingPlayer;
+	Integer GameType;
 	Integer end = 0;
 	
 	public void playNim(){
-
-		StartingPlayer = begin.menu();
+		
+		GameType = begin.menu1();
+		if(GameType == 1){
+		StartingPlayer = begin.menu2();		
 		begin.descript();
 		
 		
@@ -25,11 +28,12 @@ public class Gameplay {
 		StartingPlayer = 1;
 		}
 		}
-
-		
-		
-	}
-	
-	 
-	
+		}else if(GameType == 2)
+		{
+		while(end == 0){
+			end = player.player1();
+			end = player.EngineAI();
+			}			
+		}		
+	}	
 }

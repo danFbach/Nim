@@ -10,7 +10,8 @@ public class GameStart {
 	public int menu1(){
 		System.out.println("What type of game would you like to play?\n"
 				+ "1. Human vs. Human.\n"
-				+ "2. Human vs. Computer.\n");
+				+ "2. Human vs. Computer.\n"
+				+ "3. Human vs. Easier Computer.\n");
 		GameType = learn.nextInt();
 		return GameType;
 	}

@@ -30,10 +30,18 @@ public class Gameplay {
 		}
 		}else if(GameType == 2)
 		{
-		while(end == 0){
-			end = player.player1();
-			end = player.EngineAI();
-			}			
+			while(end == 0)
+			{
+				end = player.player1();
+				end = player.EngineAI();
+		}
+		}else if(GameType == 3)	
+		{
+			while(end == 0)
+			{
+				end = player.player1();
+				end = player.EasyEngineAI();
+			}		
 		}		
 	}	
 }
